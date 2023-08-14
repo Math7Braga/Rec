@@ -1,0 +1,28 @@
+<div class="categorias">
+    <div class="w3-col l6 w3-padding-large">
+
+      <div class="content">
+            
+        <div class="titulo">
+          <h3>Alunos</h3>
+        </div>
+        <div class="tabela">
+            <table class="table">
+                <tr>
+                    <th>Nome</th>
+                    <th>Nota</th>
+                    <th>Turma</th>
+                    <th>Resultado</th>
+                  </tr>
+                  <tr *ngFor="let a of alunos">
+                      <td>{{a.nome}}</td>
+                      <td>{{a.nota}}</td>
+                      <td>{{a.turma}}</td>
+                <td [ngStyle]="{'color': alunosburro(a.nota) === 'Aprovado' ? 'green' : 'red'}">
+                    {{ alunosburro(a.nota) }}
+                  </td>
+              </tr>
+          </table>
+        </div>
+    </div>  
+</div>
